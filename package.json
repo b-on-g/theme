@@ -193,7 +193,6 @@
     "$mol_html"
   ],
   "dependencies": {
-    "internal": "*",
     "jsdom": "*"
   }
 }
