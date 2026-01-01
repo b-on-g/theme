@@ -144,6 +144,8 @@
     "$bog_theme_auto",
     "$bog_theme_toggle",
     "$mol_pop",
+    "$mol_follower",
+    "$mol_ghost",
     "$mol_layer",
     "$mol_scroll",
     "$mol_print",
