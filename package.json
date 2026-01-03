@@ -112,6 +112,7 @@
     "$mol_charset",
     "$mol_charset_encoding",
     "$mol_charset_encode",
+    "$mol_charset_buffer",
     "$mol_file_transaction",
     "$mol_example_large",
     "$mol_example",
