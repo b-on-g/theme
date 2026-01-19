@@ -235,3 +235,85 @@
 		--mol_theme_special: #c7b18c;
 	}
 }
+
+/* Monefro dark theme - inspired by Monefy */
+[mol_theme='$mol_theme_monefro_dark'],
+:where([mol_theme='$mol_theme_monefro_dark']) [mol_theme] {
+	--mol_theme_luma: -1;
+	--mol_theme_image: invert(1) hue-rotate(180deg);
+	--mol_theme_spirit: rgba(0, 0, 0, 0.6);
+
+	--mol_theme_back: #24201c;
+	--mol_theme_card: #2c2722;
+	--mol_theme_field: #29241f;
+	--mol_theme_hover: rgba(255, 255, 255, 0.04);
+
+	--mol_theme_text: #f0e7dc;
+	--mol_theme_shade: #b5a99c;
+	--mol_theme_line: rgba(255, 255, 255, 0.12);
+	--mol_theme_focus: #56c78a;
+
+	--mol_theme_control: #56c78a;
+	--mol_theme_current: #f2776e;
+	--mol_theme_special: #f6b04a;
+}
+
+@supports (color: oklch(0% 0 0deg)) {
+	[mol_theme='$mol_theme_monefro_dark'],
+	:where([mol_theme='$mol_theme_monefro_dark']) [mol_theme] {
+		--mol_theme_back: #24201c;
+		--mol_theme_card: #2c2722;
+		--mol_theme_field: #29241f;
+		--mol_theme_hover: rgba(255, 255, 255, 0.04);
+
+		--mol_theme_text: #f0e7dc;
+		--mol_theme_shade: #b5a99c;
+		--mol_theme_line: rgba(255, 255, 255, 0.12);
+		--mol_theme_focus: #56c78a;
+
+		--mol_theme_control: #56c78a;
+		--mol_theme_current: #f2776e;
+		--mol_theme_special: #f6b04a;
+	}
+}
+
+/* Monefro light theme - inspired by Monefy */
+[mol_theme='$mol_theme_monefro_light'],
+:where([mol_theme='$mol_theme_monefro_light']) [mol_theme] {
+	--mol_theme_luma: 1;
+	--mol_theme_image: none;
+	--mol_theme_spirit: rgba(255, 255, 255, 0.75);
+
+	--mol_theme_back: #f6f2ea;
+	--mol_theme_card: #ffffff;
+	--mol_theme_field: #fff8ef;
+	--mol_theme_hover: rgba(0, 0, 0, 0.04);
+
+	--mol_theme_text: #3f3b36;
+	--mol_theme_shade: #8b8278;
+	--mol_theme_line: rgba(64, 55, 46, 0.15);
+	--mol_theme_focus: #2f9a6a;
+
+	--mol_theme_control: #2f9a6a;
+	--mol_theme_current: #e85b54;
+	--mol_theme_special: #f3a43b;
+}
+
+@supports (color: oklch(0% 0 0deg)) {
+	[mol_theme='$mol_theme_monefro_light'],
+	:where([mol_theme='$mol_theme_monefro_light']) [mol_theme] {
+		--mol_theme_back: #f6f2ea;
+		--mol_theme_card: #ffffff;
+		--mol_theme_field: #fff8ef;
+		--mol_theme_hover: rgba(0, 0, 0, 0.04);
+
+		--mol_theme_text: #3f3b36;
+		--mol_theme_shade: #8b8278;
+		--mol_theme_line: rgba(64, 55, 46, 0.15);
+		--mol_theme_focus: #2f9a6a;
+
+		--mol_theme_control: #2f9a6a;
+		--mol_theme_current: #e85b54;
+		--mol_theme_special: #f3a43b;
+	}
+}
