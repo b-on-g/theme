@@ -236,6 +236,88 @@
 	}
 }
 
+/* HomeRent dark theme */
+[mol_theme='$mol_theme_homerent_dark'],
+:where([mol_theme='$mol_theme_homerent_dark']) [mol_theme] {
+	--mol_theme_luma: -1;
+	--mol_theme_image: invert(1) hue-rotate(180deg);
+	--mol_theme_spirit: rgba(0, 0, 0, 0.6);
+
+	--mol_theme_back: #2f2f2f;
+	--mol_theme_card: #3a3a3a;
+	--mol_theme_field: #3a3a3a;
+	--mol_theme_hover: rgba(255, 255, 255, 0.06);
+
+	--mol_theme_text: #f5f5f5;
+	--mol_theme_shade: #c7c7c7;
+	--mol_theme_line: #ffffff26;
+	--mol_theme_focus: #8fc32b;
+
+	--mol_theme_control: #dbe05b;
+	--mol_theme_current: #8fc32b;
+	--mol_theme_special: #8fc32b;
+}
+
+@supports (color: oklch(0% 0 0deg)) {
+	[mol_theme='$mol_theme_homerent_dark'],
+	:where([mol_theme='$mol_theme_homerent_dark']) [mol_theme] {
+		--mol_theme_back: #2f2f2f;
+		--mol_theme_card: #3a3a3a;
+		--mol_theme_field: #3a3a3a;
+		--mol_theme_hover: rgba(255, 255, 255, 0.06);
+
+		--mol_theme_text: #f5f5f5;
+		--mol_theme_shade: #c7c7c7;
+		--mol_theme_line: #ffffff26;
+		--mol_theme_focus: #8fc32b;
+
+		--mol_theme_control: #dbe05b;
+		--mol_theme_current: #8fc32b;
+		--mol_theme_special: #8fc32b;
+	}
+}
+
+/* HomeRent light theme */
+[mol_theme='$mol_theme_homerent_light'],
+:where([mol_theme='$mol_theme_homerent_light']) [mol_theme] {
+	--mol_theme_luma: 1;
+	--mol_theme_image: none;
+	--mol_theme_spirit: rgba(245, 245, 245, 0.75);
+
+	--mol_theme_back: #f5f5f5;
+	--mol_theme_card: #ffffff;
+	--mol_theme_field: #ffffff;
+	--mol_theme_hover: #8fc32b1a;
+
+	--mol_theme_text: #4c4c4c;
+	--mol_theme_shade: #707070;
+	--mol_theme_line: #4c4c4c26;
+	--mol_theme_focus: #8fc32b;
+
+	--mol_theme_control: #dbe05b;
+	--mol_theme_current: #8fc32b;
+	--mol_theme_special: #8fc32b;
+}
+
+@supports (color: oklch(0% 0 0deg)) {
+	[mol_theme='$mol_theme_homerent_light'],
+	:where([mol_theme='$mol_theme_homerent_light']) [mol_theme] {
+		--mol_theme_back: #f5f5f5;
+		--mol_theme_card: #ffffff;
+		--mol_theme_field: #ffffff;
+		--mol_theme_hover: #8fc32b1a;
+
+		--mol_theme_text: #4c4c4c;
+		--mol_theme_shade: #707070;
+		--mol_theme_line: #4c4c4c26;
+		--mol_theme_focus: #8fc32b;
+
+		--mol_theme_control: #dbe05b;
+		--mol_theme_current: #8fc32b;
+		--mol_theme_special: #8fc32b;
+	}
+}
+
 /* Monefro dark theme - inspired by Monefy */
 [mol_theme='$mol_theme_monefro_dark'],
 :where([mol_theme='$mol_theme_monefro_dark']) [mol_theme] {

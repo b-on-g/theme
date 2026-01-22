@@ -28,6 +28,8 @@ namespace $ {
 		'$mol_theme_dark',
 		'$mol_theme_monefro_light',
 		'$mol_theme_monefro_dark',
+		'$mol_theme_homerent_light',
+		'$mol_theme_homerent_dark',
 		'$mol_theme_upwork',
 		'$mol_theme_ainews_light',
 		'$mol_theme_ainews_dark',
