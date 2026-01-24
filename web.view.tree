@@ -324,7 +324,6 @@ $mol_button_copy $mol_button_minor
 		<= Icon $mol_icon_clipboard_outline
 		<= title \
 
-
 $mol_button_major $mol_button_minor
 	theme \$mol_theme_base
 
