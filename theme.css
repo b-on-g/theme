@@ -284,7 +284,7 @@
 	--mol_theme_image: none;
 	--mol_theme_spirit: rgba(245, 245, 245, 0.75);
 
-	--mol_theme_back: #f5f5f5;
+	--mol_theme_back: #ffffff;
 	--mol_theme_card: #ffffff;
 	--mol_theme_field: #ffffff;
 	--mol_theme_hover: #8fc32b1a;
@@ -302,7 +302,7 @@
 @supports (color: oklch(0% 0 0deg)) {
 	[mol_theme='$mol_theme_homerent_light'],
 	:where([mol_theme='$mol_theme_homerent_light']) [mol_theme] {
-		--mol_theme_back: #f5f5f5;
+		--mol_theme_back: #ffffff;
 		--mol_theme_card: #ffffff;
 		--mol_theme_field: #ffffff;
 		--mol_theme_hover: #8fc32b1a;
