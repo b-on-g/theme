@@ -1,0 +1,10 @@
+{
+	"name": "bog_theme_demo",
+	"short_name": "bog_theme_demo",
+	"description": "",
+	"id": "bog_theme_demo",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#000000",
+	"theme_color": "#000000"
+}
