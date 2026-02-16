@@ -1,6 +1,7 @@
 :root {
 	--mol_theme_hue: 645deg;
 	--mol_theme_hue_spread: 90deg;
+	--mol_theme_background: var(--mol_theme_back);
 
 	/* Bog theme semantic aliases */
 	--mol_theme_primary_hue: var(--mol_theme_hue);
@@ -244,6 +245,7 @@
 	--mol_theme_spirit: rgba(0, 0, 0, 0.6);
 
 	--mol_theme_back: #2f2f2f;
+	--mol_theme_background: #f5f5f5;
 	--mol_theme_card: #3a3a3a;
 	--mol_theme_field: #3a3a3a;
 	--mol_theme_hover: rgba(255, 255, 255, 0.06);
@@ -262,6 +264,7 @@
 	[mol_theme='$mol_theme_homerent_dark'],
 	:where([mol_theme='$mol_theme_homerent_dark']) [mol_theme] {
 		--mol_theme_back: #2f2f2f;
+		--mol_theme_background: #f5f5f5;
 		--mol_theme_card: #3a3a3a;
 		--mol_theme_field: #3a3a3a;
 		--mol_theme_hover: rgba(255, 255, 255, 0.06);
@@ -285,6 +288,7 @@
 	--mol_theme_spirit: rgba(245, 245, 245, 0.75);
 
 	--mol_theme_back: #ffffff;
+	--mol_theme_background: #f5f5f5;
 	--mol_theme_card: #ffffff;
 	--mol_theme_field: #ffffff;
 	--mol_theme_hover: #8fc32b1a;
@@ -303,6 +307,7 @@
 	[mol_theme='$mol_theme_homerent_light'],
 	:where([mol_theme='$mol_theme_homerent_light']) [mol_theme] {
 		--mol_theme_back: #ffffff;
+		--mol_theme_background: #f5f5f5;
 		--mol_theme_card: #ffffff;
 		--mol_theme_field: #ffffff;
 		--mol_theme_hover: #8fc32b1a;

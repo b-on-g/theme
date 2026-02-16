@@ -5,6 +5,7 @@ namespace $ {
 	 */
 	export const $bog_theme = $mol_style_prop('mol_theme', [
 		'back',
+		'background',
 		'hover',
 		'card',
 		'current',
