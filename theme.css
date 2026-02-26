@@ -323,6 +323,50 @@
 	}
 }
 
+/* Giper Smash dark theme - original game palette */
+[mol_theme='$mol_theme_giper_smash_dark'],
+:where([mol_theme='$mol_theme_giper_smash_dark']) [mol_theme] {
+	--mol_theme_luma: -1;
+	--mol_theme_image: invert(1) hue-rotate(180deg);
+	--mol_theme_spirit: rgba(0, 0, 0, 0.85);
+
+	--mol_theme_back: #1a1a2e;
+	--mol_theme_card: #2d2d44;
+	--mol_theme_field: #16213e;
+	--mol_theme_hover: rgba(118, 75, 162, 0.15);
+
+	--mol_theme_text: #ffffff;
+	--mol_theme_shade: #b0b0cc;
+	--mol_theme_line: rgba(255, 255, 255, 0.12);
+	--mol_theme_focus: #f5b041;
+
+	--mol_theme_control: #44a08d;
+	--mol_theme_current: #0088cc;
+	--mol_theme_special: #764ba2;
+}
+
+/* Giper Smash light theme - bright game palette */
+[mol_theme='$mol_theme_giper_smash_light'],
+:where([mol_theme='$mol_theme_giper_smash_light']) [mol_theme] {
+	--mol_theme_luma: 1;
+	--mol_theme_image: none;
+	--mol_theme_spirit: rgba(255, 255, 255, 0.85);
+
+	--mol_theme_back: #f0eef5;
+	--mol_theme_card: #ffffff;
+	--mol_theme_field: #e8e5f0;
+	--mol_theme_hover: rgba(118, 75, 162, 0.08);
+
+	--mol_theme_text: #1a1a2e;
+	--mol_theme_shade: #5c5c7a;
+	--mol_theme_line: rgba(26, 26, 46, 0.12);
+	--mol_theme_focus: #d4941a;
+
+	--mol_theme_control: #2e8b73;
+	--mol_theme_current: #0077b3;
+	--mol_theme_special: #6a3d99;
+}
+
 /* Monefro dark theme - inspired by Monefy */
 [mol_theme='$mol_theme_monefro_dark'],
 :where([mol_theme='$mol_theme_monefro_dark']) [mol_theme] {
