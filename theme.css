@@ -448,3 +448,92 @@
 		--mol_theme_special: #f3a43b;
 	}
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   Calm theme — universal working theme (draft for review)
+   Base hue: 230° (blue-gray), spread: 90°
+   Style: quiet, professional, no noise
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Calm dark theme */
+[mol_theme='$mol_theme_calm_dark'],
+:where([mol_theme='$mol_theme_calm_dark']) [mol_theme] {
+	--mol_theme_luma: -1;
+	--mol_theme_image: invert(1) hue-rotate(180deg);
+	--mol_theme_spirit: #000000bf;
+	--mol_theme_hue: 230deg;
+	--mol_theme_hue_spread: 90deg;
+
+	--mol_theme_back: #0d1117;
+	--mol_theme_card: #161b2240;
+	--mol_theme_field: #0a0e1440;
+	--mol_theme_hover: #ffffff0c;
+
+	--mol_theme_text: #e6edf3;
+	--mol_theme_shade: #8b949e;
+	--mol_theme_line: #30363d;
+	--mol_theme_focus: #d29922;
+
+	--mol_theme_control: #2f81f7;
+	--mol_theme_current: #3fb950;
+	--mol_theme_special: #a371f7;
+}
+
+/* Calm light theme */
+[mol_theme='$mol_theme_calm_light'],
+:where([mol_theme='$mol_theme_calm_light']) [mol_theme] {
+	--mol_theme_luma: 1;
+	--mol_theme_image: none;
+	--mol_theme_spirit: #f7f8fabf;
+	--mol_theme_hue: 230deg;
+	--mol_theme_hue_spread: 90deg;
+
+	--mol_theme_back: #f7f8fa;
+	--mol_theme_card: #ffffff80;
+	--mol_theme_field: #e8eaf0bf;
+	--mol_theme_hover: #0000000a;
+
+	--mol_theme_text: #1a1c23;
+	--mol_theme_shade: #656a80;
+	--mol_theme_line: #3a3e5026;
+	--mol_theme_focus: #b87518;
+
+	--mol_theme_control: #3560b8;
+	--mol_theme_current: #28856e;
+	--mol_theme_special: #8a4aad;
+}
+
+/* Calm dark sub-themes */
+:where([mol_theme='$mol_theme_calm_dark']) [mol_theme='$mol_theme_base'] {
+	--mol_theme_back: #1a2840;
+	--mol_theme_card: #243450;
+}
+:where([mol_theme='$mol_theme_calm_dark']) [mol_theme='$mol_theme_current'] {
+	--mol_theme_back: #143028;
+	--mol_theme_card: #1c3e3450;
+}
+:where([mol_theme='$mol_theme_calm_dark']) [mol_theme='$mol_theme_special'] {
+	--mol_theme_back: #2a1c48;
+	--mol_theme_card: #3a2a5c50;
+}
+:where([mol_theme='$mol_theme_calm_dark']) [mol_theme='$mol_theme_accent'] {
+	--mol_theme_back: #3a1c2a;
+	--mol_theme_card: #4c283a50;
+}
+
+:where([mol_theme='$mol_theme_calm_light']) [mol_theme='$mol_theme_base'] {
+	--mol_theme_back: oklch(85% 0.075 var(--mol_theme_hue));
+	--mol_theme_card: oklch(98% 0.03 var(--mol_theme_hue) / 0.25);
+}
+:where([mol_theme='$mol_theme_calm_light']) [mol_theme='$mol_theme_current'] {
+	--mol_theme_back: oklch(85% 0.05 calc(var(--mol_theme_hue) - var(--mol_theme_hue_spread)));
+	--mol_theme_card: oklch(98% 0.03 calc(var(--mol_theme_hue) - var(--mol_theme_hue_spread)) / 0.25);
+}
+:where([mol_theme='$mol_theme_calm_light']) [mol_theme='$mol_theme_special'] {
+	--mol_theme_back: oklch(85% 0.05 calc(var(--mol_theme_hue) + var(--mol_theme_hue_spread)));
+	--mol_theme_card: oklch(98% 0.03 calc(var(--mol_theme_hue) + var(--mol_theme_hue_spread)) / 0.25);
+}
+:where([mol_theme='$mol_theme_calm_light']) [mol_theme='$mol_theme_accent'] {
+	--mol_theme_back: oklch(83% 0.1 calc(var(--mol_theme_hue) + 180deg));
+	--mol_theme_card: oklch(98% 0.03 calc(var(--mol_theme_hue) + 180deg) / 0.25);
+}

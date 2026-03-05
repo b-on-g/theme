@@ -36,6 +36,8 @@ namespace $ {
 		'$mol_theme_upwork',
 		'$mol_theme_ainews_light',
 		'$mol_theme_ainews_dark',
+		'$mol_theme_calm_dark',
+		'$mol_theme_calm_light',
 	] as const
 
 	/**

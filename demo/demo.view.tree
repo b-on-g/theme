@@ -6,10 +6,14 @@ $bog_theme_demo $mol_example_large
 		--mol_theme_hue_spread <= hue_spread_deg \
 	sub /
 		<= Config $mol_row sub /
-			<= Theme_switcher $mol_form_field
+			<= Theme_field $mol_form_field
 				name \Theme
-				Content <= Theme_toggle $bog_theme_toggle
-					theme_auto <= Theme
+				Content <= Theme_select $mol_select
+					dictionary <= theme_dictionary *
+					value? <=> theme_current? \
+					options <= theme_options /string
+			<= Theme_toggle $bog_theme_toggle
+				theme_auto <= Theme
 			<= Hue_field $mol_form_field
 				name \Hue
 				Content <= Hue $mol_number
