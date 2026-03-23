@@ -4,8 +4,8 @@ $bog_theme_toggle $mol_pop
 	align \bottom_right
 	Anchor $mol_button_minor
 		sub /
-			<= Icon $mol_icon_brightness_4
-		hint @ \Cycle through themes
+			<= Icon $mol_view
+		hint <= anchor_hint \Переключить тему
 		click?event <=> clicked?event null
 		event *
 			^
@@ -14,6 +14,9 @@ $bog_theme_toggle $mol_pop
 			pointerup?event <=> press_end?event null
 			pointercancel?event <=> press_cancel?event null
 			lostpointercapture?event <=> press_lost?event null
+	Icon_light $mol_icon_white_balance_sunny
+	Icon_dark $mol_icon_weather_night
+	Icon_system $mol_icon_monitor
 	bubble_content /
 		<= Backdrop $mol_view
 			event *
