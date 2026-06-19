@@ -4164,6 +4164,9 @@ var $;
 			if(next !== undefined) return next;
 			return null;
 		}
+		is_light_now(){
+			return false;
+		}
 		attr(){
 			return {"mol_theme": (this.theme())};
 		}

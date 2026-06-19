@@ -1760,6 +1760,7 @@ declare namespace $ {
 		theme_next( next?: any ): any
 		theme_prev( next?: any ): any
 		theme_set( next?: any ): any
+		is_light_now( ): boolean
 		attr( ): ({ 
 			'mol_theme': ReturnType< $bog_theme_auto['theme'] >,
 		}) 
