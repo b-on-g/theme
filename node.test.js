@@ -9371,7 +9371,10 @@ var $;
                     this.is_long_press = false;
                     return null;
                 }
+                const root = document.documentElement;
+                root.classList.add('bog_theme_switching');
                 this.theme_auto().mode_next();
+                setTimeout(() => root.classList.remove('bog_theme_switching'), 350);
                 return null;
             }
             press_start(event) {
@@ -9445,6 +9448,13 @@ var $;
         }
         $$.$bog_theme_toggle = $bog_theme_toggle;
     })($$ = $.$$ || ($.$$ = {}));
+})($ || ($ = {}));
+
+;
+"use strict";
+var $;
+(function ($) {
+    $mol_style_attach("bog/theme/toggle/toggle.view.css", ".bog_theme_switching,\n.bog_theme_switching * {\n\ttransition: background-color 300ms ease, color 300ms ease, border-color 300ms ease, fill 300ms ease !important;\n}\n\n@media (prefers-reduced-motion: reduce) {\n\t.bog_theme_switching,\n\t.bog_theme_switching * {\n\t\ttransition: none !important;\n\t}\n}\n");
 })($ || ($ = {}));
 
 ;
