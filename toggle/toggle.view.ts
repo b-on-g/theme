@@ -35,7 +35,10 @@ namespace $.$$ {
                 return null
             }
 
+            const root = document.documentElement
+            root.classList.add( 'bog_theme_switching' )
             this.theme_auto().mode_next()
+            setTimeout( () => root.classList.remove( 'bog_theme_switching' ), 350 )
 
             return null
         }
