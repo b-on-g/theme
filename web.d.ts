@@ -1678,6 +1678,20 @@ declare namespace $ {
 }
 
 declare namespace $ {
+    class $mol_state_session<Value> extends $mol_object {
+        static 'native()': Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
+        static native(): Storage | {
+            getItem(key: string): any;
+            setItem(key: string, value: string): void;
+            removeItem(key: string): void;
+        };
+        static value<Value>(key: string, next?: Value): Value;
+        prefix(): string;
+        value(key: string, next?: Value): Value;
+    }
+}
+
+declare namespace $ {
     /**
      * Decorates method to fiber to ensure it is executed only once inside other fiber from [mol_wire](../wire/README.md)
      * @see https://mol.hyoo.ru/#!section=docs/=1fcpsq_1wh0h2
@@ -1760,8 +1774,10 @@ declare namespace $.$$ {
         themes_default(): readonly $.$bog_theme_name[];
         /** Stores current mode in localStorage. Defaults to 'system'. */
         mode(next?: $bog_theme_mode): $bog_theme_mode;
-        /** Cycles: system → light → dark → system (skips 'custom') */
+        click_step(next?: number): number;
+        /** 3-click cycle: opposite → back → system. */
         mode_next(): void;
+        is_light_now(): any;
         theme_index(next?: number): number;
         system_theme_index(): number;
         theme(): any;
