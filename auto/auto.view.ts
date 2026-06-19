@@ -14,12 +14,27 @@ namespace $.$$ {
             return this.$.$mol_state_local.value(`${this}.mode()`, next) ?? 'system'
         }
 
-        /** Cycles: system → light → dark → system (skips 'custom') */
+        @$mol_mem
+        click_step(next?: number): number {
+            return this.$.$mol_state_session.value(`${this}.click_step()`, next) ?? 0
+        }
+
+        /** 3-click cycle: opposite → back → system. */
         @$mol_action
         mode_next() {
-            const cycle: $bog_theme_mode[] = ['system', 'light', 'dark']
-            const i = cycle.indexOf(this.mode())
-            this.mode(cycle[i === -1 ? 0 : (i + 1) % cycle.length])
+            const step = (this.click_step() + 1) % 3
+            this.click_step(step)
+            if (step === 0) this.mode('system')
+            else this.mode(this.is_light_now() ? 'dark' : 'light')
+        }
+
+        @$mol_mem
+        is_light_now() {
+            const mode = this.mode()
+            if (mode === 'light') return true
+            if (mode === 'dark') return false
+            if (mode === 'system') return this.$.$mol_lights()
+            return this.theme().toLowerCase().includes('light')
         }
 
         @$mol_mem
@@ -86,6 +101,8 @@ namespace $.$$ {
                 this.mode('custom')
                 this.theme_index(index % themes.length)
             }
+
+            this.click_step(0)
         }
     }
 }
