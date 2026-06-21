@@ -1,0 +1,27 @@
+$bog_theme_switch $mol_view
+	theme_auto $bog_theme_auto
+	sub /
+		<= Light $mol_button_minor
+			attr *
+				^
+				bog_theme_switch_active <= light_active false
+			hint <= light_hint @ \Светлая
+			click?event <=> set_light?event null
+			sub /
+				<= Light_icon $mol_icon_white_balance_sunny
+		<= System $mol_button_minor
+			attr *
+				^
+				bog_theme_switch_active <= system_active false
+			hint <= system_hint @ \Как в системе
+			click?event <=> set_system?event null
+			sub /
+				<= System_icon $mol_icon_monitor
+		<= Dark $mol_button_minor
+			attr *
+				^
+				bog_theme_switch_active <= dark_active false
+			hint <= dark_hint @ \Тёмная
+			click?event <=> set_dark?event null
+			sub /
+				<= Dark_icon $mol_icon_weather_night

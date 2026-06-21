@@ -8,9 +8,17 @@ namespace $.$$ {
             return this.$.$bog_theme_names
         }
 
-        /** Stores current mode in localStorage. Defaults to 'system'. */
+        /** Stores current mode in localStorage. Defaults to 'system'.
+         *  При записи дёргает класс `.bog_theme_switching` на `<html>` —
+         *  это активирует CSS-transition'ы на цветах темы.
+         */
         @$mol_mem
         mode(next?: $bog_theme_mode): $bog_theme_mode {
+            if (next !== undefined && typeof document !== 'undefined') {
+                const root = document.documentElement
+                root.classList.add('bog_theme_switching')
+                setTimeout(() => root.classList.remove('bog_theme_switching'), 350)
+            }
             return this.$.$mol_state_local.value(`${this}.mode()`, next) ?? 'system'
         }
 
