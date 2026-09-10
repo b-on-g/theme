@@ -33,5 +33,37 @@ namespace $.$$ {
             }
             return this.Theme().theme()
         }
+
+        bars() {
+            return [ 0, 1, 2 ].map( index => this.Bar( index ) )
+        }
+
+        @ $mol_mem_key
+        bar_x( index: number ) {
+            return [ 0, 1, 2, 3, 4 ].map( x => x * 4 + index )
+        }
+
+        @ $mol_mem_key
+        bar_y( index: number ) {
+            return [ 3, 5, 2, 6, 4 ].map( y => y + index )
+        }
+    }
+
+    export class $bog_theme_demo_bar extends $.$bog_theme_demo_bar {
+
+        @ $mol_mem
+        sat( next?: number ) {
+            return next ?? 100
+        }
+
+        @ $mol_mem
+        lig( next?: number ) {
+            return next ?? 100
+        }
+
+        @ $mol_mem
+        color() {
+            return `hsl( ${ this.hue() }, ${ this.sat() }%, ${ this.lig() }% )`
+        }
     }
 }

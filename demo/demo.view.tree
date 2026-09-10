@@ -24,14 +24,34 @@ $bog_theme_demo $mol_example_large
 				Content <= Hue_spread $mol_number
 					value? <=> hue_spread? 90
 					precision_change 15
+			<= Sat_field $mol_form_field
+				name \Bar saturation
+				Content <= Sat $mol_number
+					value? <=> sat? 80
+					precision_change 10
+			<= Lig_field $mol_form_field
+				name \Bar lightness
+				Content <= Lig $mol_number
+					value? <=> lig? 60
+					precision_change 10
 		<= Scroll $mol_scroll sub /
-			<= Cases $bog_theme_demo_case
-				title \Current light
-				inner /
-					<= Base $bog_theme_demo_case theme \$mol_theme_base
-					<= Current $bog_theme_demo_case theme \$mol_theme_current
-					<= Special $bog_theme_demo_case theme \$mol_theme_special
-					<= Accent $bog_theme_demo_case theme \$mol_theme_accent
+			<= Content $mol_list rows /
+				<= Plot $mol_plot_pane
+					hue_base <= hue
+					hue_shift <= hue_spread
+					graphs <= bars /
+						<= Bar* $bog_theme_demo_bar
+							series_x <= bar_x* /number
+							series_y <= bar_y* /number
+							sat <= sat
+							lig <= lig
+				<= Cases $bog_theme_demo_case
+					title \Current light
+					inner /
+						<= Base $bog_theme_demo_case theme \$mol_theme_base
+						<= Current $bog_theme_demo_case theme \$mol_theme_current
+						<= Special $bog_theme_demo_case theme \$mol_theme_special
+						<= Accent $bog_theme_demo_case theme \$mol_theme_accent
 	tags /
 		\theme
 		\skin
@@ -58,3 +78,7 @@ $bog_theme_demo_case $mol_view
 			<= Special $mol_button_copy title \$mol_theme.special
 		^ inner
 	inner /
+
+$bog_theme_demo_bar $mol_plot_bar
+	sat? +NaN
+	lig? +NaN

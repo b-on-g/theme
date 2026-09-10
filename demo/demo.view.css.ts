@@ -1,4 +1,13 @@
 namespace $.$$ {
+	$mol_style_define($bog_theme_demo, {
+		Plot: {
+			minHeight: '16rem',
+			flex: {
+				shrink: 0,
+			},
+		},
+	})
+
 	$mol_style_define($bog_theme_demo_case, {
 		gap: $mol_gap.block,
 		padding: $mol_gap.block,
