@@ -214,12 +214,20 @@
     "$mol_icon_menu",
     "$mol_icon_menu_up_outline",
     "$mol_icon_menu_up",
+    "$mol_plot_pane",
+    "$mol_plot",
+    "$mol_vector",
+    "$mol_touch",
+    "$mol_plot_graph",
+    "$mol_svg_group",
+    "$mol_svg_title",
     "$mol_button_copy",
     "$mol_blob",
     "$mol_icon_clipboard_outline",
     "$mol_icon_clipboard",
     "$mol_html_encode",
-    "$mol_html"
+    "$mol_html",
+    "$mol_plot_bar"
   ],
   "dependencies": {
     "autoinstall": "*",
