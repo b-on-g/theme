@@ -11516,14 +11516,9 @@ var $;
 			]);
 			return obj;
 		}
-		Content(){
-			const obj = new this.$.$mol_list();
-			(obj.rows) = () => ([(this.Plot()), (this.Cases())]);
-			return obj;
-		}
 		Scroll(){
 			const obj = new this.$.$mol_scroll();
-			(obj.sub) = () => ([(this.Content())]);
+			(obj.sub) = () => ([(this.Cases())]);
 			return obj;
 		}
 		plugins(){
@@ -11533,7 +11528,11 @@ var $;
 			return {"--mol_theme_hue": (this.hue_deg()), "--mol_theme_hue_spread": (this.hue_spread_deg())};
 		}
 		sub(){
-			return [(this.Config()), (this.Scroll())];
+			return [
+				(this.Config()), 
+				(this.Plot()), 
+				(this.Scroll())
+			];
 		}
 		tags(){
 			return ["theme", "skin"];
@@ -11567,7 +11566,6 @@ var $;
 	($mol_mem(($.$bog_theme_demo.prototype), "Special"));
 	($mol_mem(($.$bog_theme_demo.prototype), "Accent"));
 	($mol_mem(($.$bog_theme_demo.prototype), "Cases"));
-	($mol_mem(($.$bog_theme_demo.prototype), "Content"));
 	($mol_mem(($.$bog_theme_demo.prototype), "Scroll"));
 	($.$bog_theme_demo_case) = class $bog_theme_demo_case extends ($.$mol_view) {
 		theme(){
@@ -11788,9 +11786,11 @@ var $;
     (function ($$) {
         $mol_style_define($bog_theme_demo, {
             Plot: {
-                minHeight: '16rem',
+                height: '16rem',
                 flex: {
+                    grow: 0,
                     shrink: 0,
+                    basis: '16rem',
                 },
             },
         });

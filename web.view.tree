@@ -797,24 +797,23 @@ $bog_theme_demo $mol_example_large
 				Content <= Lig $mol_number
 					value? <=> lig? 60
 					precision_change 10
+		<= Plot $mol_plot_pane
+			hue_base <= hue
+			hue_shift <= hue_spread
+			graphs <= bars /
+				<= Bar* $bog_theme_demo_bar
+					series_x <= bar_x* /number
+					series_y <= bar_y* /number
+					sat <= sat
+					lig <= lig
 		<= Scroll $mol_scroll sub /
-			<= Content $mol_list rows /
-				<= Plot $mol_plot_pane
-					hue_base <= hue
-					hue_shift <= hue_spread
-					graphs <= bars /
-						<= Bar* $bog_theme_demo_bar
-							series_x <= bar_x* /number
-							series_y <= bar_y* /number
-							sat <= sat
-							lig <= lig
-				<= Cases $bog_theme_demo_case
-					title \Current light
-					inner /
-						<= Base $bog_theme_demo_case theme \$mol_theme_base
-						<= Current $bog_theme_demo_case theme \$mol_theme_current
-						<= Special $bog_theme_demo_case theme \$mol_theme_special
-						<= Accent $bog_theme_demo_case theme \$mol_theme_accent
+			<= Cases $bog_theme_demo_case
+				title \Current light
+				inner /
+					<= Base $bog_theme_demo_case theme \$mol_theme_base
+					<= Current $bog_theme_demo_case theme \$mol_theme_current
+					<= Special $bog_theme_demo_case theme \$mol_theme_special
+					<= Accent $bog_theme_demo_case theme \$mol_theme_accent
 	tags /
 		\theme
 		\skin

@@ -5039,12 +5039,7 @@ declare namespace $ {
 		,
 		ReturnType< $bog_theme_demo_case['inner'] >
 	>
-	type $mol_list__rows_bog_theme_demo_37 = $mol_type_enforce<
-		readonly(any)[]
-		,
-		ReturnType< $mol_list['rows'] >
-	>
-	type $mol_scroll__sub_bog_theme_demo_38 = $mol_type_enforce<
+	type $mol_scroll__sub_bog_theme_demo_37 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_scroll['sub'] >
@@ -5082,7 +5077,6 @@ declare namespace $ {
 		Special( ): $bog_theme_demo_case
 		Accent( ): $bog_theme_demo_case
 		Cases( ): $bog_theme_demo_case
-		Content( ): $mol_list
 		Scroll( ): $mol_scroll
 		plugins( ): readonly(any)[]
 		style( ): ({ 
