@@ -1,9 +1,11 @@
 namespace $.$$ {
 	$mol_style_define($bog_theme_demo, {
 		Plot: {
-			minHeight: '16rem',
+			height: '16rem',
 			flex: {
+				grow: 0,
 				shrink: 0,
+				basis: '16rem',
 			},
 		},
 	})
