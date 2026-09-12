@@ -37,11 +37,16 @@ namespace $.$$ {
         }
 
         @$mol_mem
+        system_light() {
+            return this.$.$mol_media.match('(prefers-color-scheme: light)')
+        }
+
+        @$mol_mem
         is_light_now() {
             const mode = this.mode()
             if (mode === 'light') return true
             if (mode === 'dark') return false
-            if (mode === 'system') return this.$.$mol_lights()
+            if (mode === 'system') return this.system_light()
             return this.theme().toLowerCase().includes('light')
         }
 
@@ -57,8 +62,7 @@ namespace $.$$ {
         @$mol_mem
         system_theme_index(): number {
             const themes = this.themes()
-            const prefersLight = this.$.$mol_lights()
-            const preferredTheme = prefersLight ? this.theme_light() : this.theme_dark()
+            const preferredTheme = this.system_light() ? this.theme_light() : this.theme_dark()
             const index = themes.indexOf(preferredTheme)
             return index !== -1 ? index : 0
         }
@@ -77,8 +81,7 @@ namespace $.$$ {
                 return themes[index % themes.length]
             }
 
-            // system — follow browser preference
-            return this.$.$mol_lights() ? this.theme_light() : this.theme_dark()
+            return this.system_light() ? this.theme_light() : this.theme_dark()
         }
 
         @$mol_action
